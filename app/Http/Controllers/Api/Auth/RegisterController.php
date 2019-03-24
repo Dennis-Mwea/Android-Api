@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Laravel\Passport\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Route;
 
 class RegisterController extends Controller
 {
@@ -47,19 +46,6 @@ class RegisterController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        $params = [
-            'grant_type' => 'password',
-            'client_id' => $this->client->id,
-            'client_secret' => $this->client->secret,
-            'username' => $request->email,
-            'password' => $request->password,
-            'scope' => '*',
-        ];
-
-        $request->request->add($params);
-
-        $proxy = Request::create('oauth/token', 'POST');
-
-        return Route::dispatch($proxy);
+        return $this->issueToken($request, 'password');
     }
 }
