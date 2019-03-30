@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.iml
 .gradle
 /local.properties
@@ -11,3 +12,10 @@
 /build
 /captures
 .externalNativeBuild
+=======
+/Laravel/node_modules
+/Laravel/public/hot
+/Laravel/public/storage
+/Laravel/storage/*.key
+/Laravel/vendor
+>>>>>>> c4389abd9a5ad78e0ea5810d9fb0633af869698a
