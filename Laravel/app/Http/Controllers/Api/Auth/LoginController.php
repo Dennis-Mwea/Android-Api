@@ -2,80 +2,55 @@
 
 namespace App\Http\Controllers\Api\Auth;
 
-use Illuminate\Http\Request;
-use Laravel\Passport\Client;
-use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use Auth;
-use App\Traits\IssueTokenTrait;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
+use Laravel\Passport\Client;
 
 class LoginController extends Controller
 {
+
     use IssueTokenTrait;
 
-    /**
-     * Passport client.
-     *
-     * @var
-     */
-    private $client;
+	private $client;
 
-    /**
-     * Initialize passport client.
-     */
-    public function __construct()
-    {
-        $this->client = Client::find(1);
-    }
+	public function __construct(){
+		$this->client = Client::find(1);
+	}
 
-    /**
-     * Login an existing user through api.
-     *
-     * @param Request $request
-     *
-     * @return passport access token
-     */
-    public function login(Request $request)
-    {
-        $this->validate($request, [
-            'email' => 'required',
-            'password' => 'required',
-        ]);
+    public function login(Request $request){
+
+    	$this->validate($request, [
+    		'email' => 'required',
+    		'password' => 'required'
+    	]);
 
         return $this->issueToken($request, 'password');
+
     }
 
-    /**
-     * Refresh authenticated user's token through api.
-     *
-     * @param Request $request
-     *
-     * @return passport access token
-     */
-    public function refresh(Request $request)
-    {
-        $this->validate($request, [
-            'refresh_token' => 'required',
-        ]);
+    public function refresh(Request $request){
+    	$this->validate($request, [
+    		'refresh_token' => 'required'
+    	]);
 
-        return $this->issueToken($request, 'refresh_token');
+    	return $this->issueToken($request, 'refresh_token');
+
     }
 
-    /**
-     * Logout an authenticated user through api.
-     *
-     * @param Request $request
-     */
-    public function logout(Request $request)
-    {
-        $accessToken = Auth::user()->token();
+    public function logout(Request $request){
 
-        DB::table('oauth_refresh_tokens')
-            ->where('access_token_id', $accessToken->id)
-            ->update(['revoked' => true]);
+    	$accessToken = Auth::user()->token();
 
-        $accessToken->revoke();
+    	DB::table('oauth_refresh_tokens')
+    		->where('access_token_id', $accessToken->id)
+    		->update(['revoked' => true]);
 
-        return response()->json([], 204);
+    	$accessToken->revoke();
+
+    	return response()->json([], 204);
+
     }
 }

@@ -2,50 +2,37 @@
 
 namespace App\Http\Controllers\Api\Auth;
 
+use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 use Laravel\Passport\Client;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
-    /**
-     * Passport client.
-     *
-     * @var
-     */
-    private $client;
+    use IssueTokenTrait;
 
-    /**
-     * Initialize passport client.
-     */
-    public function __construct()
-    {
-        $this->client = Client::find(1);
-    }
+	private $client;
 
-    /**
-     * Register a new user through api.
-     *
-     * @param Request $request
-     *
-     * @return passport access token
-     */
-    public function register(Request $request)
-    {
-        $this->validate($request, [
-            'name' => 'required|string',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:8|confirmed',
-        ]);
+	public function __construct(){
+		$this->client = Client::find(1);
+	}
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+    public function register(Request $request){
 
-        return $this->issueToken($request, 'password');
+    	$this->validate($request, [
+    		'name' => 'required',
+    		'email' => 'required|email|unique:users,email',
+    		'password' => 'required|min:6'
+    	]);
+
+    	$user = User::create([
+    		'name' => request('name'),
+    		'email' => request('email'),
+    		'password' => bcrypt(request('password'))
+    	]);
+
+    	return $this->issueToken($request, 'password');
+
     }
 }
