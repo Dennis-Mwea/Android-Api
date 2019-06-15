@@ -7,6 +7,6 @@
     <string name="err_password">The password must be at least 6 characters.</string>
 
 
-    <string name="facebook_app_id">2205963622792628</string>
-    <string name="fb_login_protocol_scheme">fb2205963622792628</string>
+    <string name="facebook_app_id">2214668045314437</string>
+    <string name="fb_login_protocol_scheme">fb2214668045314437</string>
 </resources>

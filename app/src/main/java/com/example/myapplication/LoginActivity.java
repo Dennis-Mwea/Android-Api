@@ -31,7 +31,6 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.http.POST;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -107,7 +106,6 @@ public class LoginActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_login)
     void login() {
-
         String email = tilEmail.getEditText().getText().toString();
         String password = tilPassword.getEditText().getText().toString();
 
@@ -151,6 +149,11 @@ public class LoginActivity extends AppCompatActivity {
 
         }
 
+    }
+
+    @OnClick(R.id.go_to_google)
+    void googleSignIn() {
+        startActivity(new Intent(LoginActivity.this, GoogleLoginActivity.class));
     }
 
     @OnClick(R.id.go_to_register)

@@ -14,7 +14,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.moshi.MoshiConverterFactory;
 
 public class RetrofitBuilder {
-    private static final String BASE_URL = "https://9db71b3a.ngrok.io/api/";
+    private static final String BASE_URL = "https://1ce1fc73.ngrok.io/api/";
 
     private final static OkHttpClient client = buildClient();
     private final static Retrofit retrofit = buildRetrofit(client);

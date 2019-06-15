@@ -1,0 +1,159 @@
+{
+  "project_info": {
+    "project_number": "744562190015",
+    "firebase_url": "https://work-1556f.firebaseio.com",
+    "project_id": "work-1556f",
+    "storage_bucket": "work-1556f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744562190015:android:c996290a5af6869e",
+        "android_client_info": {
+          "package_name": "ax.synt.dropexpress_client_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744562190015-jedatsqk7jf00692ene47aslvghn93ad.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ax.synt.dropexpress_client_app",
+            "certificate_hash": "3ae31a8606e91771b877f1e819df17cbd2d9e856"
+          }
+        },
+        {
+          "client_id": "744562190015-bci8kc0e0af42hojh72ke5aot004vcdb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTKA3iicfBc6m02SHmGDarGmLu2nZfzEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744562190015-p9svbdc1h9p55d04pcaunm1did50uf0q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744562190015:android:13c3c6a65bcbec53",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744562190015-20oiretacej2el5but13hm6drv4n7hmk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "3ae31a8606e91771b877f1e819df17cbd2d9e856"
+          }
+        },
+        {
+          "client_id": "744562190015-pj9sf3l2iknoastput8vi6nsvoijktno.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "02974f0dd0c6285d774847d54843cc3080f7b198"
+          }
+        },
+        {
+          "client_id": "744562190015-bci8kc0e0af42hojh72ke5aot004vcdb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTKA3iicfBc6m02SHmGDarGmLu2nZfzEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744562190015-p9svbdc1h9p55d04pcaunm1did50uf0q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744562190015:android:a02983e7ef0f3658",
+        "android_client_info": {
+          "package_name": "com.lyne.trial1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744562190015-bci8kc0e0af42hojh72ke5aot004vcdb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTKA3iicfBc6m02SHmGDarGmLu2nZfzEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744562190015-p9svbdc1h9p55d04pcaunm1did50uf0q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744562190015:android:3e892ef4c9ca5cc8",
+        "android_client_info": {
+          "package_name": "info.androidhive.paytmgateway"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744562190015-p8qadc66e1pa66pc9823rieenj2f8vhe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "info.androidhive.paytmgateway",
+            "certificate_hash": "02974f0dd0c6285d774847d54843cc3080f7b198"
+          }
+        },
+        {
+          "client_id": "744562190015-bci8kc0e0af42hojh72ke5aot004vcdb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTKA3iicfBc6m02SHmGDarGmLu2nZfzEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744562190015-p9svbdc1h9p55d04pcaunm1did50uf0q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

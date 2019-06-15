@@ -35,6 +35,16 @@ android:padding="8dp">
         android:layout_width="46dp"
         android:layout_height="46dp" />
 
+    <TextView
+        android:id="@+id/go_to_google"
+        android:text="Sign in google"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        style="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <android.support.design.widget.TextInputLayout
         android:id="@+id/til_email"
         android:hint="Email"
